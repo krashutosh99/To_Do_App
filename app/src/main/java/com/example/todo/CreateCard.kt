@@ -1,6 +1,4 @@
 package com.example.todo
-
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,10 +9,11 @@ import kotlinx.android.synthetic.main.activity_create_card.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
-class CreateCard : AppCompatActivity() {
+class CreateCard : AppCompatActivity()
+{
     private lateinit var database: myDatabase
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_card)
         database = Room.databaseBuilder(

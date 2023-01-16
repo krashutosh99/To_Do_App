@@ -19,13 +19,14 @@ class UpdateCard : AppCompatActivity() {
             applicationContext, myDatabase::class.java, "To_Do"
         ).build()
         val pos = intent.getIntExtra("id", -1)
-        if (pos != -1) {
+        if (pos != -1)
+        {
             val title = DataObject.getData(pos).title
             val priority = DataObject.getData(pos).priority
             create_title.setText(title)
             create_priority.setText(priority)
 
-            delete_button.setOnClickListener {
+            delete_button.setOnClickListener{
                 DataObject.deleteData(pos)
                 GlobalScope.launch {
                     database.dao().deleteTask(
